@@ -1,71 +1,46 @@
-# OnePlanck website
+# OnePlanck website — final upload package
 
-Static corporate landing page for `oneplanck.com`, designed for GitHub Pages.
+This is the final static website package for **https://oneplanck.com**.
 
-## Important before publishing
+## Included
 
-The contact button currently uses:
+- `index.html` — complete landing page
+- `styles.css` — responsive styling
+- `script.js` — mobile navigation, current year, reveal effects
+- `favicon.svg`
+- `404.html`
+- `CNAME` — custom domain for GitHub Pages
+- `robots.txt`
+- `sitemap.xml`
 
-`founder@oneplanck.com`
+## Company information included
 
-If your actual mailbox is different, open `index.html` and replace every occurrence of `founder@oneplanck.com` with the email you created.
+- Brand: OnePlanck
+- Legal entity: ONEPLANCK TECHNOLOGY COMPANY LIMITED
+- Vietnamese legal name: CÔNG TY TNHH CÔNG NGHỆ ONEPLANCK
+- Enterprise / Tax ID: 0315701672
+- Jurisdiction: Vietnam
 
-The Research Credentials section deliberately avoids inventing publication titles or venues. Add only publications that are already public/accepted and that you are comfortable displaying.
+## Contact email
 
-## Deploy on GitHub Pages
+The site currently uses `founder@oneplanck.com`.
+If your actual company mailbox is different, replace every occurrence of `founder@oneplanck.com` in `index.html` before publishing.
 
-1. Create a new **public** GitHub repository, e.g. `oneplanck-website`.
-2. Upload all files in this folder to the root of the repository.
-3. Commit to the `main` branch.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select `main` and `/ (root)`, then Save.
-7. Under **Custom domain**, enter `oneplanck.com` and Save.
+## GitHub Pages upload
 
-This repository already includes a `CNAME` file containing `oneplanck.com`.
+1. Open repository `tvquy85/oneplanck-website`.
+2. Delete or replace the existing website files in the repository root.
+3. Upload **all files from this package to the repository root** (not inside another folder).
+4. Commit to `main`.
+5. GitHub Pages should remain configured as `main / (root)`.
+6. Keep custom domain set to `oneplanck.com`.
+7. Do not change the GoDaddy DNS records that are already correctly pointing the apex domain to GitHub Pages.
+8. Keep all GoDaddy email MX/TXT/DKIM records unchanged.
+9. After deployment and TLS issuance, enable **Enforce HTTPS** in Settings → Pages.
 
-## GoDaddy DNS for GitHub Pages
+## Notes
 
-In GoDaddy → Domains → oneplanck.com → DNS, add these A records for the root domain:
-
-| Type | Name | Value |
-|---|---|---|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-
-Add this CNAME for `www`:
-
-| Type | Name | Value |
-|---|---|---|
-| CNAME | www | YOUR-GITHUB-USERNAME.github.io |
-
-Replace `YOUR-GITHUB-USERNAME` with your GitHub username.
-
-### Critical email warning
-
-Do **not** delete or alter GoDaddy email records such as MX, SPF/TXT, DKIM, or other mail-related DNS records. Only modify/add the website records needed for GitHub Pages.
-
-## HTTPS
-
-After GitHub verifies the custom domain, enable **Enforce HTTPS** in Settings → Pages. DNS propagation can take from a few minutes to several hours.
-
-## Suggested Claude Startups consistency
-
-Use the same company identity everywhere:
-
-- Website: `https://oneplanck.com`
-- Company email: your `@oneplanck.com` founder email
-- Claude Console account: same company email
-- Startup application: same company email and website
-
-## Local preview
-
-Double-click `index.html`, or run a basic local server from this directory:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
+- Product statements are intentionally labeled as in-development / research prototype / exploratory to avoid overstating commercial readiness.
+- The site explicitly describes a planned Claude use case for reasoning-heavy agentic research workflows.
+- No specific publication titles or venue names are invented. The research-credential language reflects a publication-backed founder track record without fabricating details.
+- The site includes a financial-research disclaimer and public legal-entity information.

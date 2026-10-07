@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://oneplanck.com/sitemap.xml
